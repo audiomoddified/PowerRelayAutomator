@@ -12,6 +12,8 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
 
+    private static final String WINDOW_TITLE = "Power Relay Automator";
+
     private PowerRelay powerRelay = null;
     private TempReader tempReader = null;
     private FileLogger fileLogger = null;
@@ -19,8 +21,8 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 460, 300);
+        stage.setTitle(WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
     }
